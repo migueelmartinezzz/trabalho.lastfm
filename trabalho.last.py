@@ -24,7 +24,7 @@ def plot_popularity(similar_artists):
     if similar_artists:
         names = list(similar_artists.keys())
         popularity = list(similar_artists.values())
-        plt.figure(figsize=(10, 6))
+        plt.figure(figsize=(50, 30))
         plt.barh(names, popularity, color='skyblue')
         plt.xlabel('Popularidade')
         plt.ylabel('Artista')
@@ -37,6 +37,7 @@ def plot_popularity(similar_artists):
 def main():
     st.title("HPIYFA")
     st.title('How :red[Popular] Is Your Favorite Artist?')
+    st.subheader('O site que te mostra o quão popular seu artista favorito é, divider='rainbow')
     api_key = '7df4a32d7aec2f6a2fbe9cd02c3a5a6e'
     artist_name = st.text_input("Digite o nome do seu artista favorito:")
     if artist_name:
@@ -51,4 +52,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-st.title('HPISFA')
