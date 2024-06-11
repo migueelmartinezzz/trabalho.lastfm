@@ -35,7 +35,8 @@ def plot_popularity(similar_artists):
         st.warning("Não foi possível plotar o gráfico, dados ausentes.")
 
 def main():
-    st.title("Busca de Artistas Semelhantes")
+    st.title("HPIYFA")
+    st.title('How :red[Popular] Is Your Favorite Artist?)
     api_key = '7df4a32d7aec2f6a2fbe9cd02c3a5a6e'
     artist_name = st.text_input("Digite o nome do seu artista favorito:")
     if artist_name:
