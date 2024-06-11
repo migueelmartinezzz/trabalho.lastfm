@@ -42,7 +42,7 @@ def main():
     api_key = '7df4a32d7aec2f6a2fbe9cd02c3a5a6e'
     artist_name = st.text_input("Digite o nome do seu artista favorito:")
     
-    #st.markdown(
+    st.markdown(
     """
     <style>
     .stApp {
