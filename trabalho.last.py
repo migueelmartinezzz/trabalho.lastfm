@@ -40,7 +40,7 @@ def main():
     st.subheader('O site que te mostra o quão popular seu artista favorito é', divider='rainbow')
     api_key = '7df4a32d7aec2f6a2fbe9cd02c3a5a6e'
     artist_name = st.text_input("Digite o nome do seu artista favorito:")
-    st.markdown("<style></style>", unsafe_allow_html=true)
+    #st.markdown("<style></style>", unsafe_allow_html=true)
     
     if artist_name:
         similar_artists = get_similar_artists(artist_name, api_key)
