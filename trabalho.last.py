@@ -23,8 +23,8 @@ def get_similar_artists(artist_name, api_key):
 
 def plot_popularity(similar_artists):
     if similar_artists:
-        names = list(similar_artists.keys())
-        popularity = list(similar_artists.values())
+        names = list(similar_artists.most_common(10).keys())
+        popularity = list(similar_artists.most_common(10).values())
         plt.figure(figsize=(50, 25))
         plt.barh(names, popularity, color='skyblue')
         plt.xlabel('Popularidade')
