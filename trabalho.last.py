@@ -7,7 +7,7 @@ def get_similar_artists(artist_name, api_key):
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
-        similar_artists = dict(sorted(similar_artists.items(), key=lambda item: item[1], reverse=True))
+        similar_artists = {}
         top_10_artists = dict(list(similar_artists.items())[:10])
         for artist in data['similarartists']['artist']:
             novo_nome = artist['name']
