@@ -25,7 +25,7 @@ def plot_popularity(similar_artists):
     if similar_artists:
         names = list(similar_artists.keys())
         popularity = list(similar_artists.values())
-        plt.figure(figsize=(50, 30))
+        plt.figure(figsize=(100, 60))
         plt.barh(names, popularity, color='skyblue')
         plt.xlabel('Popularidade')
         plt.ylabel('Artista')
