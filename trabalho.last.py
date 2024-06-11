@@ -51,7 +51,8 @@ def main():
     }
     </style>
     """,
-    unsafe_allow_html=True)
+    unsafe_allow_html=True
+    )
     
     if artist_name:
         similar_artists = get_similar_artists(artist_name, api_key)
