@@ -41,7 +41,17 @@ def main():
     st.subheader('O site que te mostra os :blue[artistas mais populares] relacionados ao seu fave', divider='rainbow')
     api_key = '7df4a32d7aec2f6a2fbe9cd02c3a5a6e'
     artist_name = st.text_input("Digite o nome do seu artista favorito:")
-    #st.markdown("<style></style>", unsafe_allow_html=true)
+    
+    st.markdown(
+    """
+    <style>
+    .stApp {
+        background: url('https://raw.githubusercontent.com/JuliaFrazao/projeto-A2/main/cortina%20vermelha.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
     
     if artist_name:
         similar_artists = get_similar_artists(artist_name, api_key)
