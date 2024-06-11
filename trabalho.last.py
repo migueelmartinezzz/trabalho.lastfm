@@ -1,14 +1,14 @@
 import streamlit as st
 import requests
 import matplotlib.pyplot as plt
+from collections import Counter
 
 def get_similar_artists(artist_name, api_key):
     url = f'http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist={artist_name}&api_key={api_key}&format=json'
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
-        similar_artists = {}
-        top_10_artists = dict(list(similar_artists.items())[:10])
+        similar_artists = Counter()
         for artist in data['similarartists']['artist']:
             novo_nome = artist['name']
             url = f'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist={novo_nome}&api_key={api_key}&format=json'
@@ -47,7 +47,7 @@ def main():
         similar_artists = get_similar_artists(artist_name, api_key)
         if similar_artists:
             st.write(f"Artistas semelhantes a '{artist_name}':")
-            for artist, popularity in similar_artists.items():
+            for artist, popularity in similar_artists.most_common(10):
                 st.write(f"{artist}: {popularity} ouvintes")
             plot_popularity(similar_artists)
         else:
