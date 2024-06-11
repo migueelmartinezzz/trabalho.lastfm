@@ -46,7 +46,7 @@ def main():
     """
     <style>
     .stApp {
-        background: url('https://raw.githubusercontent.com/JuliaFrazao/projeto-A2/main/cortina%20vermelha.jpg') no-repeat center center fixed;
+        background: url('https://github.com/migueelmartinezzz/trabalho.lastfm/blob/main/back%20stage.jpg') no-repeat center center fixed;
         background-size: cover;
     }
     </style>
