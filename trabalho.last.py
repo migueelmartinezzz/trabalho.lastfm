@@ -26,7 +26,7 @@ def plot_popularity(similar_artists):
         names = list(map(lambda x: x[0], similar_artists.most_common()))
         popularity = list(map(lambda x: x[1], similar_artists.most_common()))
         plt.figure(figsize=(50, 25))
-        plt.barh(names, popularity, color='skyblue')
+        plt.barh(names[:10], popularity, color='skyblue')
         plt.xlabel('Popularidade')
         plt.ylabel('Artista')
         plt.title('Popularidade dos Artistas Semelhantes')
