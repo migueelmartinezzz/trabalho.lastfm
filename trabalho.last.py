@@ -23,10 +23,10 @@ def get_similar_artists(artist_name, api_key):
 
 def plot_popularity(similar_artists):
     if similar_artists:
-        names = list(map(lambda x: x[0], similar_artists.most_common()))
-        popularity = list(map(lambda x: x[1], similar_artists.most_common()))
-        plt.figure(figsize=(50, 25))
-        plt.barh(names[:10], popularity, color='skyblue')
+        names = list(similar_artists.keys())[:10]
+        popularity = list(similar_artists.values())[:10]
+        plt.figure(figsize=(10, 6))  # Ajuste o tamanho conforme necessário
+        plt.barh(names, popularity, color='skyblue')
         plt.xlabel('Popularidade')
         plt.ylabel('Artista')
         plt.title('Popularidade dos Artistas Semelhantes')
@@ -34,7 +34,6 @@ def plot_popularity(similar_artists):
         st.pyplot(plt)
     else:
         st.warning("Não foi possível plotar o gráfico, dados ausentes.")
-
 def main():
     st.title("HPIYFA")
     st.header('How :red[Popular] Is Your Favorite Artist?')
