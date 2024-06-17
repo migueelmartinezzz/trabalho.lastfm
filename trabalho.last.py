@@ -28,8 +28,9 @@ def plot_popularity(similar_artists):
         popularity = list(dict(similar_artists).values())
         plt.figure(figsize=(10, 6))  # Ajuste o tamanho conforme necessário
         plt.bar(names, popularity, color='skyblue')
-        plt.xlabel('Popularidade')
-        plt.ylabel('Artista')
+        plt.ylabel('Popularidade')
+        plt.xticks(rotation = 45) 
+        plt.xlabel('Artista')
         plt.title('Popularidade dos Artistas Semelhantes')
         plt.gca()
         st.pyplot(plt)
