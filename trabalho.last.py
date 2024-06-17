@@ -15,7 +15,7 @@ def get_similar_artists(artist_name, api_key):
             response = requests.get(url)
             data2 = response.json()
             if 'artist' in data2:
-                similar_artists[novo_nome] = data2['artist']['stats']['listeners']
+                similar_artists[novo_nome] = int(data2['artist']['stats']['listeners'])
         return similar_artists
     else:
         st.error("Erro ao consultar a API: {}".format(response.status_code))
