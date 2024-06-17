@@ -57,7 +57,7 @@ def main():
         similar_artists = get_similar_artists(artist_name, api_key)
         if similar_artists:
             st.write(f"Artistas semelhantes a '{artist_name}':")
-            for artist, popularity in similar_artists[:10]:
+            for artist, popularity in similar_artists.most_common(10):
                 st.write(f"{artist}: {popularity} ouvintes")
             plot_popularity(similar_artists)
         else:
