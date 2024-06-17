@@ -70,7 +70,7 @@ def main():
             st.write(f"Artistas semelhantes a '{artist_name}':")
             for artist, popularity in similar_artists.most_common(10):
                 st.write(f"{artist}: {popularity} ouvintes")
-            plot_popularity(similar_artists.most_commom(10))
+            plot_popularity(similar_artists.most_common(10))
         else:
             st.warning("Não foi possível obter artistas semelhantes ao seu favorito.")
 
