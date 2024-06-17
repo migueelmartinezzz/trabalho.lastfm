@@ -23,7 +23,7 @@ def get_similar_artists(artist_name, api_key):
 
 def plot_popularity(similar_artists):
     if similar_artists:
-        names = list(dict(similar_artists))
+        names = list(dict(similar_artists).keys())
         popularity = list(dict(similar_artists).values())
         plt.figure(figsize=(10, 6))  # Ajuste o tamanho conforme necessário
         plt.barh(names, popularity, color='skyblue')
