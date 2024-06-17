@@ -30,7 +30,7 @@ def plot_popularity(similar_artists):
         plt.xlabel('Popularidade')
         plt.ylabel('Artista')
         plt.title('Popularidade dos Artistas Semelhantes')
-        plt.gca().invert_yaxis()
+        plt.gca()
         st.pyplot(plt)
     else:
         st.warning("Não foi possível plotar o gráfico, dados ausentes.")
