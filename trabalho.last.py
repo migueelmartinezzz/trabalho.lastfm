@@ -39,6 +39,7 @@ def main():
     st.title("HPIYFA")
     st.header('How :red[Popular] Is Your Favorite Artist?')
     st.subheader('O site que te mostra os :blue[artistas mais populares] relacionados ao seu fave', divider='rainbow')
+    #st.image(, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     api_key = '7df4a32d7aec2f6a2fbe9cd02c3a5a6e'
     artist_name = st.text_input("Digite o nome do seu artista favorito:")
     
